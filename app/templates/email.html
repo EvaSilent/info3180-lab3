@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Email</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/form.css"/>
+	<link rel="icon" href="/static/img/7.png" sizes="32x32" type="image/png"/>   
+</head>
+<body>
+  <h1>Today is: {{time}}</h1>
+    <div id="content">
+        <form action="{{url_for('sendemail')}}" method="POST">
+            <fieldset>
+                <legend>Email Form</legend>
+                <div>
+                    <input type="text" name="name" placeholder="Name"/>
+                </div>
+                <div>
+                    <input type="text" name="email" placeholder="Email"/>
+                </div>
+                <div>
+                    <input type="text" name="subject" placeholder="Subject"/>
+                </div>
+                <div>
+                    <div class="small">This area is just for message</div>
+                    <textarea name="msg" placeholder="Message"></textarea>
+                </div>    
+                <input type="submit" name="submit" value="Send"/>
+            </fieldset>    
+        </form>
+    </div>
+</body>
+</html>
